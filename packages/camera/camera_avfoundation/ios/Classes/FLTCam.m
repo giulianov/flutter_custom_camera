@@ -246,10 +246,10 @@ NSString *const errorMethod = @"error";
 
 - (void)captureToFile:(FLTThreadSafeFlutterResult *)result {
   AVCapturePhotoSettings *settings = [AVCapturePhotoSettings photoSettings];
-  if (_resolutionPreset == FLTResolutionPresetMax) {
+//GG  if (_resolutionPreset == FLTResolutionPresetMax) {
       [settings maxPhotoDimensions:YES]; //GG
 //GG      [settings setHighResolutionPhotoEnabled:YES];
-  }
+//GG  }
 
   AVCaptureFlashMode avFlashMode = FLTGetAVCaptureFlashModeForFLTFlashMode(_flashMode);
   if (avFlashMode != -1) {
